@@ -30,7 +30,7 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Build
         run: pnpm run build && cp package.json dist
+      - name: Config NPM auth
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
       - name: Publish
         run: pnpm publish dist --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
