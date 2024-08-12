@@ -5,14 +5,28 @@
 	"keywords": ["publish", "subscribe", "real time", "serverless"],
 	"author": "Tanguy Michardière",
 	"license": "MIT",
-	"types": "index.d.ts",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": {
+				"default": "./dist/index.mjs",
+				"types": "./dist/index.d.mts"
+			},
+			"require": {
+				"default": "./dist/index.js",
+				"types": "./dist/index.d.ts"
+			}
+		}
+	},
 	"scripts": {
 		"update-dependencies": "sh scripts/update-dependencies.sh",
 		"format": "biome format --write .",
 		"lint": "biome ci --error-on-warnings .",
 		"check-types": "tsc",
 		"check-dead-code": "knip",
-		"quality": "pnpm run lint && pnpm run check-types && pnpm run check-dead-code"
+		"quality": "pnpm run lint && pnpm run check-types && pnpm run check-dead-code && pnpm run build",
+		"build": "tsup"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
@@ -20,6 +34,7 @@
 		"@types/node": "18.19.44",
 		"knip": "5.27.2",
 		"npm-check-updates": "17.0.6",
+		"tsup": "8.2.4",
 		"typescript": "5.5.4"
 	}
 }

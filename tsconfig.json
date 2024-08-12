@@ -17,6 +17,6 @@
 		"isolatedModules": true,
 		"types": ["node", "@total-typescript/ts-reset"]
 	},
-	"include": ["index.d.ts", "./*.config.ts", "./*.config.mjs", "./*.config.js"],
+	"include": ["src/**/*.ts", "./*.config.ts", "./*.config.mjs", "./*.config.js"],
 	"exclude": ["node_modules"]
 }
