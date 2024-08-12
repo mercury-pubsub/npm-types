@@ -1,21 +1,21 @@
 {
 	"name": "@mercury-pubsub/types",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "",
 	"keywords": ["publish", "subscribe", "real time", "serverless"],
 	"author": "Tanguy Michardière",
 	"license": "MIT",
-	"main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+	"main": "./index.js",
+	"types": "./index.d.ts",
 	"exports": {
 		".": {
 			"import": {
-				"default": "./dist/index.mjs",
-				"types": "./dist/index.d.mts"
+				"default": "./index.mjs",
+				"types": "./index.d.mts"
 			},
 			"require": {
-				"default": "./dist/index.js",
-				"types": "./dist/index.d.ts"
+				"default": "./index.js",
+				"types": "./index.d.ts"
 			}
 		}
 	},
