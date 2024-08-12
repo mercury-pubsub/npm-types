@@ -1,1 +1,1 @@
-# npm-types
+# @mercury-pubsub/types

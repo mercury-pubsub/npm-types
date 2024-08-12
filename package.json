@@ -1,0 +1,25 @@
+{
+	"name": "@mercury-pubsub/types",
+	"version": "2.0.0",
+	"description": "",
+	"keywords": ["publish", "subscribe", "real time", "serverless"],
+	"author": "Tanguy Michardière",
+	"license": "MIT",
+	"types": "index.d.ts",
+	"scripts": {
+		"update-dependencies": "sh scripts/update-dependencies.sh",
+		"format": "biome format --write .",
+		"lint": "biome ci --error-on-warnings .",
+		"check-types": "tsc",
+		"check-dead-code": "knip",
+		"quality": "pnpm run lint && pnpm run check-types && pnpm run check-dead-code"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.3",
+		"@total-typescript/ts-reset": "0.5.1",
+		"@types/node": "18.19.44",
+		"knip": "5.27.2",
+		"npm-check-updates": "17.0.6",
+		"typescript": "5.5.4"
+	}
+}
