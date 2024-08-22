@@ -1,6 +1,6 @@
 {
 	"name": "@mercury-pubsub/types",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"description": "",
 	"keywords": ["publish", "subscribe", "real time", "serverless"],
 	"author": "Tanguy Michardière",
@@ -10,12 +10,12 @@
 	"exports": {
 		".": {
 			"import": {
-				"default": "./index.mjs",
-				"types": "./index.d.mts"
+				"types": "./index.d.mts",
+				"default": "./index.mjs"
 			},
 			"require": {
-				"default": "./index.js",
-				"types": "./index.d.ts"
+				"types": "./index.d.ts",
+				"default": "./index.js"
 			}
 		}
 	},
@@ -31,9 +31,9 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
 		"@total-typescript/ts-reset": "0.5.1",
-		"@types/node": "18.19.44",
-		"knip": "5.27.2",
-		"npm-check-updates": "17.0.6",
+		"@types/node": "18.19.45",
+		"knip": "5.27.3",
+		"npm-check-updates": "17.1.0",
 		"tsup": "8.2.4",
 		"typescript": "5.5.4"
 	}
